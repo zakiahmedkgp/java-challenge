@@ -2,6 +2,8 @@ package jp.co.axa.apidemo.controllers;
 
 import jp.co.axa.apidemo.entities.Employee;
 import jp.co.axa.apidemo.services.EmployeeService;
+import jp.co.axa.apidemo.utility.EmployeeUtility;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,7 +32,7 @@ public class EmployeeController {
     }
 
     @PostMapping("/employees")
-    public void saveEmployee(Employee employee){
+    public void saveEmployee(@RequestBody Employee employee){
         employeeService.saveEmployee(employee);
         System.out.println("Employee Saved Successfully");
     }
@@ -42,11 +44,12 @@ public class EmployeeController {
     }
 
     @PutMapping("/employees/{employeeId}")
-    public void updateEmployee(@RequestBody Employee employee,
+    public void updateEmployee(@RequestBody Employee updatedEmployee,
                                @PathVariable(name="employeeId")Long employeeId){
-        Employee emp = employeeService.getEmployee(employeeId);
-        if(emp != null){
-            employeeService.updateEmployee(employee);
+        Employee existingEmployee = employeeService.getEmployee(employeeId);
+        if(existingEmployee != null){
+        	EmployeeUtility.copy(existingEmployee, updatedEmployee);
+            employeeService.updateEmployee(existingEmployee);
         }
 
     }
