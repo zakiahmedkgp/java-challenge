@@ -20,7 +20,6 @@ import jp.co.axa.apidemo.model.AuthRequest;
 import jp.co.axa.apidemo.model.AuthResponse;
 import jp.co.axa.apidemo.repositories.UserRepository;
 import jp.co.axa.apidemo.security.jwt.JwtUtils;
-import jp.co.axa.apidemo.security.services.UserDetailsImpl;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
