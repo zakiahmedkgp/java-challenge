@@ -11,4 +11,10 @@ public class EmployeeUtility {
 		
 	}
 
+	public static boolean isInvalidEmployee(Employee employee) {
+		if(employee.getName() == null || "".equals(employee.getName()))
+			return true;
+		return false;
+	}
+
 }
