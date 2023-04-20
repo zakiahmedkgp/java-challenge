@@ -55,6 +55,16 @@ Application (with the embedded H2 database) is ready to be used ! You can access
   - Finally I am working on writing a Dockerfile so that an instance of it can be easily run by just running "Docker run myapp -p 8080:8080" my-app-image"
   - I need to remove the silly "System.out.println()" sattements which I wrote for some debugging purpose.
 
+### Experience
+
+- I have been working with java for the past 2 years on several projects
+- Most of my roles as an application developer was to implement restful API in SpringBoot framework
+- I am active on LeetCode and like to code when I am free from my office work my handle: zakiahmed8871
+- Even though I don't know any new concept, I can learn and grasp it quickly and will be able to implemet in Java in no time.
+- I have also completed a course on ReactJs the complete guide on Udemy and can create FE as well though my skills need soome polishing
+- Can create microservices in Java and deploy on any clooud based service(after exploring). 
+- I can also handle k8s clusters and monitor infratructure on k8s like handling deployments, autoscaling, ingress networking etc.
+
 ### Instructions
 
 - download the zip file of this project
