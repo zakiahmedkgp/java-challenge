@@ -65,6 +65,13 @@ Application (with the embedded H2 database) is ready to be used ! You can access
 - Can create microservices in Java and deploy on any clooud based service(after exploring). 
 - I can also handle k8s clusters and monitor infratructure on k8s like handling deployments, autoscaling, ingress networking etc.
 
+### Procedure for creating JWT and accesing Employee endpoints
+I have added "java-challenge-apis.postman_collection.json" collection file in the root directory which contains all the requests.
+Steps
+1. run "/api/v1/signup" endpoint with body containing "username" and "password" and register the user.
+2. now generate token by "api/v1/authenticate" request and adding the same username and password fields as above
+3. copy the token value and add Authorization Bearer token in other employee endpoints.
+
 ### Instructions
 
 - download the zip file of this project
